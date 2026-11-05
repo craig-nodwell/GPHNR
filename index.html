@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- GPHNR, version v0.2.0 -->
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="A free page-turning reader for GPHN graphic novels. Your book stays on your device.">
+<title>GPHNR</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192-v0.2.0.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon-v0.2.0.png">
+<link rel="stylesheet" href="gphnr-v0.2.0.css">
+</head>
+<body>
+<div id="drop">
+  <img class="mark" src="icons/icon-192-v0.2.0.png" alt="">
+  <h1>GPHNR</h1>
+  <p>The graphic novel reader</p>
+  <div id="dropzone" role="button" tabindex="0">
+    <strong>Drop your book here</strong>
+    or tap to choose the .gphn book you bought
+  </div>
+  <div id="status" aria-live="polite"></div>
+  <p class="small">Your book stays on this device. Nothing is uploaded.</p>
+  <input type="file" id="file" hidden>
+</div>
+<div id="stage"><div id="book"></div></div>
+<div class="edge prev" aria-hidden="true">&lsaquo;</div>
+<div class="edge next" aria-hidden="true">&rsaquo;</div>
+<div id="progress"></div>
+<div id="bar">
+  <button id="btnFirst" title="Back to the cover (Home)">&laquo;</button>
+  <button id="btnPrev" title="Previous (Left arrow)">&lsaquo;</button>
+  <span id="counter">Cover</span>
+  <button id="btnNext" title="Next (Right arrow)">&rsaquo;</button>
+  <span class="title" id="titleText"></span>
+  <span id="ver" style="font-size:11px;opacity:.6"></span>
+  <button id="btnOpen" title="Open another book">Open</button>
+  <button id="btnFull" title="Full screen (F)">Full screen</button>
+</div>
+<div id="hint" class="gone"></div>
+<div id="zoom"><img id="zoomImg" alt="Zoomed page"></div>
+<button id="zoomclose">Close zoom</button>
+<script src="gphnr-reader-v0.2.0.js"></script>
+<script type="module" src="gphnr-app-v0.2.0.js"></script>
+</body>
+</html>
